@@ -1,6 +1,14 @@
-# README wnnr / winner
+# wnnr / winner
 
-* [TrueNAS](https://www.truenas.com/)
+Homelab setup
 
 ---
-[(c) 2024 Cees van de Griend](https://www.cvdg.eu/wnnr/)
+
+* [Links](links.md)
+
+---
+
+## Journal
+
+* [october 2024](2024m10.md)
+
