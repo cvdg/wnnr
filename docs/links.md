@@ -1,6 +1,7 @@
 # Links
 
-[Home](Readme.md)
+[Home](README.md)
+[Journal](2024m10.md)
 
 ---
 
