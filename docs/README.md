@@ -5,6 +5,7 @@ Homelab setup
 ---
 
 * [Links](links.md)
+* [Requirements NAS](requirements.md)
 
 ---
 
