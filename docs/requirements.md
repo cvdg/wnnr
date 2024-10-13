@@ -16,3 +16,4 @@
 | 4 * [Kingston FURY 16 GB DDR4-3200 werkgeheugen](https://www.alternate.nl/Kingston-FURY/16-GB-DDR4-3200-werkgeheugen/html/product/1765479) (64GiB)| 151,96 |  |
 | 2 * [Kingston NV2 NVMe PCIe 4.0, 1 TB SSD](https://www.alternate.nl/Kingston/NV2-NVMe-PCIe-4-0-1-TB-SSD/html/product/1864204) | 115,80 | 6 |
 | 5 * [Seagate IronWolf 4 TB harde schijf](https://www.alternate.nl/Seagate/IronWolf-4-TB-harde-schijf/html/product/1820076) | 499,90 | 25 |
+| Total: | 950,66 | 96 |
