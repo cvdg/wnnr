@@ -8,6 +8,7 @@ Homelab setup
 * [Requirements NAS](requirements.md)
 * [`srv00`](srv00/index.md)
 * [`srv01`](srv01/index.md)
+* [`srv02`](srv02/index.md)
 
 ---
 

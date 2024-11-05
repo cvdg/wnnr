@@ -1,4 +1,3 @@
 # wnnr / winner
 
-Description of my
-homelab.
+Description of my homelab.
