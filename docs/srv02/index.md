@@ -10,11 +10,8 @@
 - [lsmod](mod.md)
 - [lspci](pci.md)
 
-
-## `~/.bashrc`
-
-```shell
-...
-
-export LIBVIRT_DEFAULT_URI='qemu:///system'
-```
+## Journal
+- [bashrc](journal/0000-bashrc.md)
+- [virsh net](journal/0001-virsh-net.md)
+- [lvm](journal/0002-lvm.md)
+- [virsh pool](journal/0003-virsh-pool.md)
