@@ -13,6 +13,7 @@ provider "libvirt" {
 resource "libvirt_pool" "pool" {
   name = var.libvirt_pool_name
   type = "dir"
+
   target {
     path = var.libvirt_pool_path
   }
@@ -30,14 +31,13 @@ resource "libvirt_volume" "root" {
   name           = "${format("${var.vm_name}%02s", count.index)}.qcow2"
   pool           = libvirt_pool.pool.name
   base_volume_id = libvirt_volume.base.id
-  # 32 TiB
-  size = 1024 * 1024 * 1024 * 32
+  size = 1024 * 1024 * 1024 * 32   # 32 TiB
 }
 
 data "template_file" "user_data" {
   count = var.vm_count
-
   template = file("${path.module}/cloud_init.yml")
+  
   vars = {
     vm_hostname = "${format("${var.vm_name}%02s", count.index)}.local"
   }
@@ -45,7 +45,6 @@ data "template_file" "user_data" {
 
 resource "libvirt_cloudinit_disk" "cloudinit" {
   count = var.vm_count
-
   name      = "${format("${var.vm_name}%02s", count.index)}_cloudinit.iso"
   user_data = data.template_file.user_data[count.index].rendered #if you set network user no go
   pool      = libvirt_pool.pool.name
@@ -53,14 +52,12 @@ resource "libvirt_cloudinit_disk" "cloudinit" {
 
 resource "libvirt_domain" "guest" {
   count = var.vm_count
-
   name       = format("${var.vm_name}%02s", count.index)
   memory     = var.vm_memory
   vcpu       = var.vm_cpus
   running    = true
   autostart  = true
   qemu_agent = true
-
   cloudinit = libvirt_cloudinit_disk.cloudinit[count.index].id
 
   network_interface {
@@ -72,9 +69,10 @@ resource "libvirt_domain" "guest" {
     volume_id = libvirt_volume.root[count.index].id
   }
 
-  console {
-    type        = "pty"
-    target_port = "0"
-    target_type = "virtio"
-  }
+  # console {
+  #   type        = "pty"
+  #   target_port = "0"
+  #   target_type = "virtio"
+  #   source_path = "/dev/pts/0"
+  # }
 }

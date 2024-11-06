@@ -14,4 +14,5 @@
 - [bashrc](journal/0000-bashrc.md)
 - [virsh net](journal/0001-virsh-net.md)
 - [lvm](journal/0002-lvm.md)
-- [virsh pool](journal/0003-virsh-pool.md)
+- [virsh pool](journal/0003-virsh-pool.md) (deprecated)
+- [terraform](journal/0004-terraform.md)

@@ -1,5 +1,10 @@
 # virsh pool
 
+## Deprecated
+
+Now done with `terraform`.
+
+
 ```shell
 $ virsh pool-define-as --name guests --type dir --target /srv/guests
 Pool guests defined
