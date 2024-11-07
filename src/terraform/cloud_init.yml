@@ -5,10 +5,12 @@ ssh_pwauth: false
 disable_root: true
 users:
   - name: cees
+    passwd: "$y$j9T$mdphnZ5zEbV0jzK0Iermi/$gtm3gPYbQ0u80WrZ4IORaXkXSQVT61dAVuPNhsiMJQ."
+    lock-passwd: false
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
     ssh_authorized_keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKfoFHXWOFc2QalqNbsgn/lHejw/9rlR+/esTdaeN0MN cees.van.de.griend@protonmail.com
+      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKfoFHXWOFc2QalqNbsgn/lHejw/9rlR+/esTdaeN0MN cees.van.de.griend@protonmail.com"
 growpart:
   mode: auto
   devices: ["/"]
@@ -19,5 +21,5 @@ package_upgrade: true
 packages:
   - qemu-guest-agent
 
-runcmd:
+runcmd:  
   - [ systemctl, start, qemu-guest-agent ]
